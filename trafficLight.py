@@ -17,17 +17,11 @@ def output():
     GPIO.setup(pin,GPIO.OUT);
     print "Pin's active: %s" % (pin);
 
-"""
-  GPIO.setup(17,GPIO.OUT);
-  GPIO.setup(18,GPIO.OUT);
-  GPIO.setup(22,GPIO.OUT);
-  GPIO.setup(27,GPIO.OUT);
-"""
-
+ 
 #Starts random leds
 def randomLed():
   output();
-#Switches on and off random led until user ends 
+#Switches on and off random led until user ends
   while True:
     x=random.choice(pin);
     y=random.choice(pin);
@@ -58,7 +52,7 @@ def allLed():
 
 def singleLed():
   output();
-  
+
   all=False;
   while True:
 #TODO implemet a While loop
@@ -122,9 +116,9 @@ def selection(input):
     pass; #End if
 
 
-def userInterface(): 
+def userInterface():
   try:
-    #Print the functions available 
+    #Print the functions available
     list=["Enter '1' for random leds", "Enter '2' for all leds", "Enter '3' for single leds"];
     for list in list:
       print "%s" %(list);
@@ -156,4 +150,3 @@ def userInterface():
 #userInterface();
 trafficLight();
 #stopLed();
-
