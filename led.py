@@ -14,17 +14,12 @@ def output():
     print "This is: %s" % (x);
     pass; #End for
 
-"""
-  GPIO.setup(17,GPIO.OUT);
-  GPIO.setup(18,GPIO.OUT);
-  GPIO.setup(22,GPIO.OUT);
-  GPIO.setup(27,GPIO.OUT);
-"""
+ 
 
 #Starts random leds
 def randomLed():
   output();
-#Switches on and off random led until user ends 
+#Switches on and off random led until user ends
   while True:
     x=random.choice(led);
     y=random.choice(led);
@@ -83,9 +78,9 @@ def selection(input):
     pass; #End if
 
 
-def userInterface(): 
+def userInterface():
   try:
-    #Print the functions available 
+    #Print the functions available
     list=["Enter '1' for random leds", "Enter '2' for all leds"];
     for list in list:
       print "%s" %(list);
